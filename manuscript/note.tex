@@ -1,0 +1,490 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{xurl}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\scal}[1]{\langle #1\rangle_0}
+\newcommand{\inv}{\iota}
+\title{Permuted rotor loops beyond Jenzer (2026):\\
+resolving Remark 5.5\\
+(arXiv:2610.21593v1, p.~19)}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{4 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Jenzer's (2026) same-order and star-family proofs, we resolve
+his Remark 5.5 (arXiv:2610.21593v1, p.~19): every return permutation
+satisfies the rotor-loop subset formula for every anticommuting unit
+bivector family, without the star condition.
+Conjugation eliminates every off-diagonal scalar contribution except
+possibly complementary subsets when the family size is odd. Their total
+vanishes because a balanced product in an exterior algebra has even degree.
+Corollaries give mixed-sign compact and zero formulas, the exact chain
+correction, and the range and separability of every return order.
+For at most three factors the loop has only scalar and simple bivector
+parts, and every scalar power is a Chebyshev polynomial of its scalar part.
+\end{abstract}
+
+\section{The question and the formula}
+Jenzer's Remark 5.5 on page 19 of arXiv:2610.21593v1 suggests, on numerical
+evidence, removing the star condition from Theorem 5.5~\cite{Jenzer}.
+Theorem~\ref{main} proves that extension. This is the remark titled \emph{On the Scope, with
+Numerical Evidence}; its source TeX label is \texttt{remark:5-7}.
+The same-order case is already Jenzer's Theorem 5.2. The point here is
+the cancellation for an arbitrary return order, including his triangle
+example, where the star condition fails.
+The earlier Zenodo version of 29 August 2026 labels the same posing
+remark 5.7. Its identity-order formulas and two-factor power relation are
+already proved there; the locator in the title refers to the arXiv PDF.
+The star-family chain and same-order loop formulas appeared earlier in
+Jenzer's \emph{Die Relationsalgebra}, released 6 August 2026,
+Sections 3.1--3.2, S\"atze S5.10--S5.11, pp.~18--19~\cite{JenzerBand5}.
+
+The cancellation ingredients have prior forms: conjugation averaging in
+Shirokov~\cite[Theorem 3.2]{Shirokov}, and odd exterior cancellation in
+Diehl--Reizenstein~\cite[Section 3.3, Lemma 22]{DR}, with a
+determinant--Pfaffian antecedent in de Bruijn~\cite[Section 4]{deBruijn}.
+Here they identify and cancel the complete complementary-subset contribution
+for every return order.
+
+Let $\mathcal C=\mathrm{Cl}(V,q)$ for a finite-dimensional real vector space
+with nondegenerate quadratic form of any signature. Write
+$t(x)=\scal{x}$ for its scalar part and $\widetilde x$ for reversion.
+The blade and grade conventions agree with~\cite[Section 2.3]{LS}.
+Suppose $k\geq1$ and the bivectors $B_1,\ldots,B_k$ satisfy
+\begin{equation}\label{family}
+B_i^2=-1,\qquad B_iB_j=-B_jB_i\quad(i\ne j).
+\end{equation}
+For $I=\{1,\ldots,k\}$ and $S=\{i_1<\cdots<i_m\}\subseteq I$, put
+\[
+B_S=B_{i_1}\cdots B_{i_m},\quad B_\varnothing=1,\qquad
+c_i=\cos(\theta_i/2),\quad s_i=\sin(\theta_i/2),\quad w_i=s_i^2,
+\]
+\[
+a_S=\prod_{i\in S}s_i\prod_{i\notin S}c_i,\quad
+U_i=c_i+s_iB_i,\quad
+\Theta_k(\tau)=(U_1\cdots U_k)
+(\widetilde U_{\tau(1)}\cdots\widetilde U_{\tau(k)}).
+\]
+Here $\tau$ lists the return order, so that
+\[
+\inv(\tau,S)=\#\{(i,j)\in S^2:i<j,\ \tau^{-1}(i)>\tau^{-1}(j)\},
+\qquad \eta(m)=(-1)^{m(m+3)/2}.
+\]
+The star condition means $t(B_S)=0$ for every nonempty $S$.
+
+\begin{theorem}\label{main}
+For every family satisfying \eqref{family}, every real parameter vector,
+and every permutation $\tau$ of $I$,
+\begin{equation}\label{formula}
+\scal{\Theta_k(\tau)}=
+\sum_{S\subseteq I}\eta(|S|)(-1)^{\inv(\tau,S)}
+\prod_{i\in S}w_i\prod_{i\notin S}(1-w_i).
+\end{equation}
+No star condition is required.
+\end{theorem}
+
+\section{The cancellation argument}
+The scalar map is tracial: $t(xy)=t(yx)$. Indeed, in an orthogonal basis,
+the scalar part of a product of two distinct basis blades is zero, whereas
+for equal blades the two products coincide. Bilinearity proves the assertion.
+Consequently $t(gxg^{-1})=t(x)$ for invertible $g$.
+
+\begin{lemma}\label{trace}
+If $\varnothing\ne D\subseteq I$, then $t(B_D)=0$ unless $D=I$ and $k$
+is odd. The assertion remains true if $B_i^2=\varepsilon_i\in\{-1,1\}$.
+\end{lemma}
+\begin{proof}
+Conjugation by $B_j$ fixes $B_j$ and negates every other $B_i$, since
+$B_j^{-1}=\varepsilon_jB_j$. Thus it multiplies $B_D$ by
+$(-1)^{|D|-1}$ when $j\in D$, and by $(-1)^{|D|}$ when $j\notin D$.
+For even nonzero $|D|$ choose $j\in D$; for odd $|D|$ with $D\ne I$
+choose $j\notin D$. In either case invariance gives $t(B_D)=-t(B_D)$.
+\end{proof}
+
+\begin{lemma}\label{balanced}
+In the exterior algebra on $e_1,\ldots,e_k$, the element
+\[
+W_\tau=(1+e_1)\cdots(1+e_k)
+(1-e_{\tau(1)})\cdots(1-e_{\tau(k)})
+\]
+has no odd-degree component.
+\end{lemma}
+\begin{proof}
+If $x,y$ are distinct exterior generators, then $x^2=y^2=0$ and $xy=-yx$.
+Expansion of both sides gives
+\begin{equation}\label{swap}
+(1+x)(1+y)=(1+2xy)(1+y)(1+x).
+\end{equation}
+Every factor $1+2xy$ is central and has even degree. It is invertible,
+with inverse $1-2xy$, since $(xy)^2=0$. Apply \eqref{swap} to adjacent
+factors in the second word, with $x=-e_i$, $y=-e_j$, until their indices
+are $k,k-1,\ldots,1$. This expresses the original second word as its
+reverse-ordered version times a product $E$ of central even factors.
+Now $(1+e_i)(1-e_i)=1$; cancelling from the middle out gives $W_\tau=E$.
+Hence every homogeneous component of odd degree is zero.
+\end{proof}
+
+For comparison with~\cite[Lemma 22]{DR}, take the closed polygon with increments
+\[
+e_1,\ldots,e_k,-e_{\tau(1)},\ldots,-e_{\tau(k)}.
+\]
+Its signature maps to $W_\tau$ in the exterior algebra; the cited lemma,
+applied to each odd coordinate projection, gives the same vanishing.
+The odd-dimensional determinant formula in~\cite[pp.~138--139,
+Eqs.~(4.3)--(4.5)]{deBruijn} supplies an older route: its extra
+Pfaffian column is the sum of the increments, hence zero.
+
+\begin{proof}[Proof of Theorem~\ref{main}]
+Since reversion negates a bivector, $\widetilde U_i=c_i-s_iB_i$.
+Expansion and sorting of the return factors give
+\begin{equation}\label{expand}
+t(\Theta_k(\tau))=
+\sum_{S,T\subseteq I}a_Sa_T r_\tau(T)t(B_SB_T),
+\qquad r_\tau(T)=(-1)^{|T|+\inv(\tau,T)}.
+\end{equation}
+Each swap of distinct generators contributes a minus sign; the number
+of such swaps in the selected return factors is $\inv(\tau,T)$.
+
+When $S=T$, moving equal generators together gives
+$B_S^2=(-1)^{m(m+1)/2}$, where $m=|S|$: there are $m(m-1)/2$
+interchanges and $m$ squares equal to $-1$.
+The diagonal term in \eqref{expand} is therefore
+$\eta(m)(-1)^{\inv(\tau,S)}a_S^2$, exactly the summand in \eqref{formula}.
+
+For $S\ne T$, cancelling repeated indices expresses $B_SB_T$ as
+$\pm B_{S\mathbin\triangle T}$. Lemma~\ref{trace} makes its scalar part
+zero except possibly when $k$ is odd and $T=I\setminus S$.
+For these remaining terms there are no repeated generators. Define
+$\epsilon(S,T)$ by $e_Se_T=\epsilon(S,T)e_I$ when $T=I\setminus S$,
+where all subset products are increasing. The same interchanges give
+$B_SB_T=\epsilon(S,T)B_I$. Also
+\[
+a_Sa_{I\setminus S}=\prod_{i=1}^k s_ic_i.
+\]
+Thus the entire remaining off-diagonal sum is
+\begin{equation}\label{correction}
+\left(\prod_i s_ic_i\right)t(B_I)
+\sum_{S\subseteq I}r_\tau(I\setminus S)\epsilon(S,I\setminus S).
+\end{equation}
+The last sum is precisely the coefficient of $e_I$ in $W_\tau$:
+expanding its two words selects complementary subsets, and sorting the
+second contributes $r_\tau$. For odd $k$ this coefficient is zero by
+Lemma~\ref{balanced}. This proves \eqref{formula}. The proof divides by
+no trigonometric coefficient, so zeros of $s_i$ or $c_i$ are included.
+\end{proof}
+
+\section{Consequences and source coverage}
+\begin{corollary}\label{mixed}
+Let $B_i$ be pairwise anticommuting bivectors with
+$B_i^2=\varepsilon_i\in\{-1,1\}$. For arbitrary real $c_i,s_i$, put
+$U_i=c_i+s_iB_i$. Then for every return order,
+\begin{equation}\label{mixedformula}
+t(\Theta_k(\tau))=
+\sum_{S\subseteq I}(-1)^{|S|(|S|+1)/2+\inv(\tau,S)}
+\prod_{i\in S}(\varepsilon_i s_i^2)\prod_{i\notin S}c_i^2.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Lemma~\ref{trace} and the complementary-subset cancellation are unchanged.
+The diagonal square becomes
+$B_S^2=(-1)^{m(m-1)/2}\prod_{i\in S}\varepsilon_i$.
+Multiplication by $(-1)^m$ from reversion yields \eqref{mixedformula}.
+\end{proof}
+With $c_i^2=1+\varepsilon_i s_i^2$, this is the arbitrary-permutation
+extension of Jenzer's Theorem 6.10. The choice $\varepsilon_i=+1$ and
+$(c_i,s_i)=(\cosh(\chi_i/2),\sinh(\chi_i/2))$ similarly extends his
+Theorem 6.8. Both statements follow without the star condition.
+
+\begin{corollary}\label{tracial}
+Let $A$ be any unital associative real algebra with a linear functional
+$t:A\to\mathbb R$ satisfying $t(1)=1$ and $t(xy)=t(yx)$.
+If $B_i\in A$ anticommute pairwise and $B_i^2=\varepsilon_i\in\{-1,1\}$,
+then \eqref{mixedformula} holds for
+\[
+(c_1+s_1B_1)\cdots(c_k+s_kB_k)
+(c_{\tau(1)}-s_{\tau(1)}B_{\tau(1)})\cdots
+(c_{\tau(k)}-s_{\tau(k)}B_{\tau(k)}).
+\]
+No dimension, grading or involution is needed for this algebraic statement.
+\end{corollary}
+\begin{proof}
+The trace-support lemma uses only cyclicity and the inverses
+$B_i^{-1}=\varepsilon_iB_i$. The diagonal reduction uses their scalar
+squares and $t(1)=1$; the complementary-subset sum uses only the exterior
+identity. These are exactly the steps proving Corollary~\ref{mixed}.
+\end{proof}
+This extends the observation in \cite[Remark 5.2, p.~17]{Jenzer} that
+the same-order argument applies beyond bivectors. Taking $t$ to be
+normalized matrix trace is one instance.
+
+\begin{corollary}\label{mixedpolar}
+For identity return order and normalized mixed-sign rotors
+$c_i^2-\varepsilon_i s_i^2=1$, put $w_i=s_i^2$ and
+\[
+z_i=1+\varepsilon_iw_i+\mathrm i\varepsilon_iw_i
+       =\rho_i e^{\mathrm i\alpha_i},\qquad
+\rho_i=\sqrt{(1+\varepsilon_iw_i)^2+w_i^2},
+\]
+where $\alpha_i=\operatorname{atan2}(\varepsilon_iw_i,1+\varepsilon_iw_i)$.
+Then
+\begin{equation}\label{polar}
+t(\Theta_k(\mathrm{id}))
+=\operatorname{Re}\!\left[(1+\mathrm i)\prod_i z_i\right]
+=\sqrt2\prod_i\rho_i\,
+  \cos\!\left(\frac\pi4+\sum_i\alpha_i\right).
+\end{equation}
+It vanishes exactly when $\sum_i\alpha_i\in\pi/4+\pi\mathbb Z$.
+Zeros exist for some parameters exactly when at least two signs
+$\varepsilon_i$ agree. In particular a two-factor opposite-square loop has
+scalar part $1+2w_1w_2$ and never vanishes.
+\end{corollary}
+\begin{proof}
+The period-four sequence
+$(-1)^{m(m+1)/2}=\operatorname{Re}[(1+\mathrm i)\mathrm i^m]$
+turns \eqref{mixedformula}, with $\tau=\mathrm{id}$, into the product
+in \eqref{polar}. Each $z_i$ is nonzero: for $\varepsilon_i=-1$,
+$0\leq w_i\leq1$ and $\alpha_i\in[-\pi/2,0]$; for
+$\varepsilon_i=+1$, $w_i\geq0$ and $\alpha_i\in[0,\pi/4)$.
+Taking its real part proves the zero criterion, including elliptic
+endpoints $w_i=1$. If two signs agree, set their weights to $1/\sqrt2$
+and every other weight to zero; the two-factor scalar is
+$1-2w_1w_2=0$. Without two equal signs there is at most one of each
+type: one factor has scalar 1, while opposite types give $1+2w_1w_2$.
+\end{proof}
+For all negative signs, conjugating the product in \eqref{polar} recovers
+Jenzer's compact form. The mixed-sign polar expression extends Sections
+6.3--6.4 and the discussion after Theorem 6.10; using
+$\operatorname{atan2}$ includes the endpoints omitted by the source's
+half-open elliptic angle interval.
+
+\begin{corollary}\label{chaincor}
+Every mixed-sign family of Corollary~\ref{mixed} has the exact chain formula
+\begin{equation}\label{chain}
+t(U_1\cdots U_k)=
+\begin{cases}
+\prod_i c_i,&k\text{ even},\\
+\prod_i c_i+t(B_I)\prod_i s_i,&k\text{ odd}.
+\end{cases}
+\end{equation}
+The star condition is automatic unless $k\equiv3\pmod4$;
+in that remaining case it is equivalent to $t(B_I)=0$.
+\end{corollary}
+\begin{proof}
+Expand $\sum_S a_SB_S$ and apply Lemma~\ref{trace}. For odd $k$,
+reversion gives $\widetilde{B_I}=(-1)^{k(k+1)/2}B_I$.
+Since reversion fixes scalar parts, $t(B_I)=0$ also when
+$k\equiv1\pmod4$. This describes the scalar obstruction, not a
+classification of the underlying planes.
+\end{proof}
+
+For Jenzer's triangle in $\mathrm{Cl}_{0,3}$,
+$B_1=e_1e_2$, $B_2=e_1e_3$, $B_3=e_2e_3$, one has $B_1B_2B_3=-1$.
+Thus \eqref{chain} gives $c_1c_2c_3-s_1s_2s_3$, while
+\eqref{formula} holds for all six permutations. For reverse order,
+$\inv(\tau,S)=\binom{|S|}{2}$ makes every sign in \eqref{formula} positive,
+so the sum is $\prod_i(w_i+1-w_i)=1$, agreeing with
+$P_k\widetilde P_k=1$. Identity order recovers the already proved
+Theorem 5.2 of~\cite{Jenzer}.
+The triangle's scalar chain expression is already the classical
+$XYZ$ quaternion formula in Henderson~\cite[Section 2.3, Eq.~(24), p.~10]{Henderson}.
+
+\begin{corollary}\label{powers}
+Let $1\leq k\leq3$, $B_i^2=\varepsilon_i\in\{-1,1\}$, and
+$c_i^2-\varepsilon_i s_i^2=1$. For every return permutation,
+$R=\Theta_k(\tau)$ has the form $R=a+K$, where $a=t(R)$ and $K$ is
+a simple bivector or zero, with $K^2=a^2-1$. For every integer $n\geq0$,
+\begin{equation}\label{cheb}
+t(R^n)=T_n(a),\qquad T_0(x)=1,\quad T_1(x)=x,\quad
+T_{n+1}(x)=2xT_n(x)-T_{n-1}(x).
+\end{equation}
+\end{corollary}
+\begin{proof}
+Reduce the expanded word using anticommutation and the scalar squares;
+it is a linear combination of the $B_S$. For $k=3$ the coefficient of
+$B_I$ is $\prod_i c_is_i$ times the top coefficient of $W_\tau$, hence
+zero by Lemma~\ref{balanced}, independently of the signs of the squares.
+All surviving subsets have size at most two. Products of two bivectors
+have grades 0, 2 and 4; for $i\ne j$,
+$\widetilde{B_iB_j}=B_jB_i=-B_iB_j$, so $B_iB_j$ is a bivector.
+Thus $R=a+K$ with $K$ of grade two. Each factor has unit reversion norm,
+so $1=R\widetilde R=a^2-K^2$. Its grade-four part gives
+$K\wedge K=0$, the decomposability criterion for a bivector
+\cite[Section 3.1, Example 3.1]{LS}. Finally $R^2-2aR+1=0$; multiplying
+by powers of $R$ and taking scalar parts proves \eqref{cheb} by induction.
+\end{proof}
+This proves the three-factor observations in OF 2 and OF 3 of
+\cite[Section 8.4, pp.~31--32]{Jenzer}, and extends the stated
+two-factor power identity to all return permutations and mixed signs.
+The Chebyshev consequence of the quadratic identity is classical; the
+matrix-trace form appears in~\cite[Theorem 2, Eq.~(9)]{BR}.
+The three-factor restriction matters. In $\mathrm{Cl}_{0,5}$, take
+$B_i=e_0e_i$ for $1\leq i\leq4$ and $c_i=s_i=1/\sqrt2$.
+Direct expansion of
+$R=2^{-4}\prod_{i=1}^4(1+B_i)\prod_{i=1}^4(1-B_i)$ gives
+$t(R)=-1/4$ and, writing $e_{ijkl}=e_ie_je_ke_l$,
+\[
+\langle R\rangle_4=\tfrac14(e_{0123}-e_{0124}+e_{0134}-e_{0234}+e_{1234}).
+\]
+For an even element in $\mathrm{Cl}_{0,5}$, the scalar of
+$R\widetilde R=1$ is the sum of the squared blade coefficients.
+Consequently
+\[
+t(R^2)=2t(R)^2-1+2\|\langle R\rangle_4\|^2=-1/4
+\ne T_2(-1/4)=-7/8.
+\]
+The same scalar $-1/4$ occurs for a two-factor loop with
+$(w_1,w_2)=(1,5/8)$, whose square has scalar part $-7/8$ by
+Corollary~\ref{powers}; setting two further angles to zero realizes
+that comparison within the same four-factor star family.
+
+\begin{corollary}\label{graph}
+For the square-minus-one formula, let $G_\tau$ be the graph on $I$ with
+edge $\{i,j\}$ when $i<j$ and $\tau^{-1}(i)<\tau^{-1}(j)$.
+Write $F_\tau(w)=t(\Theta_k(\tau))$ and let $e_\tau(S)$ count the
+edges induced by $S$. Then
+\begin{equation}\label{graphformula}
+F_\tau(w)=\sum_{S\subseteq I}(-1)^{e_\tau(S)}
+       \prod_{i\in S}w_i\prod_{i\notin S}(1-w_i).
+\end{equation}
+For reverse return order its range is $\{1\}$; for every other order
+its range on $[0,1]^k$ is exactly $[-1,1]$, and it has a zero.
+It factors across the connected components of $G_\tau$, and cannot
+factor across any partition that cuts an edge. In particular it is a
+product of single-variable functions exactly for reverse order.
+\end{corollary}
+\begin{proof}
+The exponents $m(m+3)/2$ and $\binom m2$ have the same parity,
+so the sign in \eqref{formula} is $(-1)^{e_\tau(S)}$.
+The weights in \eqref{graphformula} are nonnegative and sum to one,
+giving $|F_\tau|\leq1$. The graph is empty exactly for reverse order.
+For an edge $\{i,j\}$, setting all other weights to zero gives
+$1-2w_iw_j$: its endpoint values are $1,-1$, and
+$(w_i,w_j)=(1,1/2)$ is a zero. Continuity supplies the whole interval.
+Edge counts add over connected components, so their sums factor.
+Conversely, any factorization across a partition cutting this edge
+would restrict to $f(w_i)g(w_j)=1-2w_iw_j$ up to nonzero constants.
+Setting either variable to zero forces both factors constant, a contradiction.
+\end{proof}
+This extends the same-order bound, zero existence and non-separability
+statements in Sections 6.2--6.4 of~\cite{Jenzer} to every return order.
+The tensor with vertex coefficients $(-1)^{e_G(S)}$ is also the
+graph-state coefficient tensor of Hein--Eisert--Briegel~\cite[arXiv v1, Eqs.~(8)--(9)]{HEB}.
+Their cut-rank formula~\cite[arXiv v1, Proposition 3, Eq.~(42)]{HEB} gives the
+same criterion for factorization across a partition: no crossing edge.
+The symmetric identity-order specializations in Section 6.6 are prior
+results, not additional conjectures. In particular, if $a(n)$ denotes
+OEIS A009545, then
+\[
+2^kF_{\mathrm{id}}(1/2,\ldots,1/2)
+=\operatorname{Re}[(1-\mathrm i)(1+\mathrm i)^k]
+=\operatorname{Im}(1+\mathrm i)^{k+1}=a(k+1).
+\]
+The entry gives $a(0)=0$, $a(1)=1$ and
+$a(n)=2a(n-1)-2a(n-2)$~\cite{OEIS}. Thus this equal-weight sequence
+is already tabulated independently of the rotor interpretation.
+
+\section{Coverage and formal statements}
+The source items below use rendered PDF numbering; several source TeX
+labels differ. The scalar formula and the source's known special cases
+are distinguished from the additional written corollaries.
+
+\begin{center}\small
+\begin{tabular}{@{}p{.30\linewidth}p{.64\linewidth}@{}}
+\toprule Statement or source item & Coverage\\\midrule
+Cancellation ingredients & Reproved; prior proofs Shirokov (2015), Diehl--Reizenstein (2018); determinant antecedent de Bruijn (1955).\\
+Remark 5.5, p.~19 (TeX 5.7) & Proved: Theorem~\ref{main}, without the star condition.\\
+Theorems 5.2, 5.5; reverse order & Reproved; prior proof Jenzer (2026): same order, the star case and reverse order.\\
+Remark 5.2, p.~17 & Proved: arbitrary return order in a normalized tracial real algebra, Corollary~\ref{tracial}.\\
+Theorem 4.2; Remark 4.2, p.~15 (TeX 4.4) & Proved: exact chain correction, Corollary~\ref{chaincor}; triangle expression reproved, prior formula Henderson (1977).\\
+Theorems 6.8, 6.10, pp.~24--26 & Proved: arbitrary-permutation hyperbolic and mixed-sign extension, Corollary~\ref{mixed}.\\
+Sections 6.3--6.4, 6.8 & Proved: mixed-sign compact and zero criterion, Corollary~\ref{mixedpolar}. Endpoint corrected ($w=1$): the half-open elliptic argument range.\\
+Sections 6.2--6.4 & Proved: range and zeros for every return order, Corollary~\ref{graph}. Graph factorization reproved; prior proof Hein--Eisert--Briegel (2003; published 2004).\\
+Section 6.6 & Reproved specialization; prior proof Jenzer (2026): symmetric and lacunary formulas. The half-weight sequence is OEIS A009545 shifted by one.\\
+Section 8.4, OF 1 & Proved: scalar obstruction in Corollary~\ref{chaincor}. Not covered: classification of the planes.\\
+Section 8.4, OF 2, pp.~31--32 & Proved for $k\leq3$: simple bivector part and no grade four, Corollary~\ref{powers}. Not covered: general higher-grade formulas.\\
+Section 8.4, OF 3, p.~32 & Reproved; prior proof Jenzer (2026) for $k=2$ powers. Proved for $k=3$ powers, Corollary~\ref{powers}; four-factor obstruction exhibited. Not covered: general powers and other longer words.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The linked Lean declarations cover the square-minus-one formula and its
+scalar-cyclicity, trace-support and odd-coefficient ingredients.
+At revision \nolinkurl{3bedf2870aacc6e7f17353444aadaa49fb73157c}, the declaration
+\nolinkurl{D5.S3.QuadraticForms.JenzerPermutedRotorLoop.result} in
+\href{https://github.com/the-omega-institute/trureturing/blob/3bedf2870aacc6e7f17353444aadaa49fb73157c/D5/S3/QuadraticForms/JenzerPermutedRotorLoop.lean}{\nolinkurl{JenzerPermutedRotorLoop.lean}}
+proves the formula of Theorem~\ref{main}, with $\mathrm{Fin}\ k$ indexing
+the family and the native Clifford scalar projection.
+The companion
+\href{https://github.com/the-omega-institute/trureturing/blob/3bedf2870aacc6e7f17353444aadaa49fb73157c/D5/S3/QuadraticForms/JenzerPermutedRotorLoopAlgebra.lean}{\nolinkurl{JenzerPermutedRotorLoopAlgebra.lean}}
+contains \nolinkurl{NativeBridge.scalar_cyclic} and
+\nolinkurl{TraceSupport.tracial_subset_vanishing}, expressing cyclicity
+and Lemma~\ref{trace}'s square-$-1$ case. In
+\href{https://github.com/the-omega-institute/trureturing/blob/3bedf2870aacc6e7f17353444aadaa49fb73157c/D5/S3/QuadraticForms/JenzerPermutedRotorLoopWords.lean}{\nolinkurl{JenzerPermutedRotorLoopWords.lean}},
+\nolinkurl{ExteriorSum.signed_top_sum_zero} proves the odd top-coefficient
+cancellation. The mixed-sign extension and \eqref{chain} are written
+proofs above. The compact and zero formulas, chain refinement,
+tracial-algebra extension, three-factor simplicity and powers, and graph factorization are also
+written proofs, beyond the scope of the main declaration.
+
+The accompanying \texttt{verify.py} compares exact polynomial coefficients
+for every return permutation for $1\leq k\leq6$, checks all mixed
+signatures through $k=4$, and checks the non-star triangle and a rational
+rotation of it. These are finite checks with independent formal $c_i,s_i$;
+the proofs above establish the all-parameter statements. It also checks
+the mixed compact identity, graph coefficients and factorization,
+three-factor grades and powers, and the four-factor example using exact
+rational arithmetic; the ranges and counts are in \texttt{verification.txt}.
+
+\begin{thebibliography}{99}\small
+\bibitem{Jenzer} N.~Jenzer, \emph{Star-Ordered Rotor Loops in Clifford
+Algebras}, arXiv:2610.21593v1 (2026), especially Theorem 5.5 and
+Remark 5.5, pp.~18--19; Sections 6.7--6.8 and 8.4.
+\url{https://arxiv.org/abs/2610.21593v1}. Earlier version:
+29 August 2026, \url{https://doi.org/10.5281/zenodo.22159164}.
+\bibitem{JenzerBand5} N.~Jenzer, \emph{Winkel statt Zeit -- Band 5 --
+Die Relationsalgebra}, 6 August 2026, Sections 3.1--3.2,
+S\"atze S5.10--S5.11, pp.~18--19.
+\url{https://doi.org/10.5281/zenodo.20769239}.
+\bibitem{Shirokov} D.~S.~Shirokov, \emph{Method of Averaging in Clifford
+Algebras}, arXiv:1412.0246v2 (19 June 2015), Theorem 3.2, Eq.~(3.2), p.~4.
+\url{https://arxiv.org/abs/1412.0246v2}.
+\bibitem{DR} J.~Diehl and J.~Reizenstein, \emph{Invariants of multidimensional
+time series based on their iterated-integral signature}, arXiv:1801.06104v2
+(9 May 2018), Section 3.3, Lemma 22, p.~18.
+\url{https://arxiv.org/abs/1801.06104v2}.
+\bibitem{deBruijn} N.~G.~de Bruijn, \emph{On some multiple integrals involving
+determinants}, Journal of the Indian Mathematical Society (N.S.) 19
+(1955), 133--151, Section 4, pp.~138--139.
+\url{https://pure.tue.nl/ws/files/1920642/597510.pdf}.
+\bibitem{BR} P.~Brandi and P.~E.~Ricci, \emph{Composition Identities of
+Chebyshev Polynomials, via $2\times2$ Matrix Powers}, Symmetry 12 (2020),
+746, Theorem 2, Eq.~(9).
+\url{https://doi.org/10.3390/sym12050746}.
+\bibitem{HEB} M.~Hein, J.~Eisert and H.~J.~Briegel, \emph{Multiparty
+entanglement in graph states}, arXiv:quant-ph/0307130v1 (18 July 2003),
+Eqs.~(8)--(9), Proposition 3, Eq.~(42); published in Phys.~Rev.~A 69
+(2004), 062311. \url{https://arxiv.org/abs/quant-ph/0307130v1}.
+\bibitem{Henderson} D.~M.~Henderson, \emph{Euler Angles, Quaternions, and
+Transformation Matrices---Working Relationships}, NASA-TM-74839,
+JSC-12960 (July 1977), Section 2.3, Eq.~(24), p.~10.
+\url{https://archive.org/download/NASA_NTRS_Archive_19770024290/NASA_NTRS_Archive_19770024290.pdf}.
+\bibitem{LS} D.~Lundholm and L.~Svensson, \emph{Clifford algebra, geometric
+algebra, and applications}, arXiv:0907.5356v1 (2009), Sections 2.3 and 3.1,
+especially Example 3.1. \url{https://arxiv.org/abs/0907.5356v1}.
+\bibitem{OEIS} OEIS Foundation Inc., \emph{The On-Line Encyclopedia of
+Integer Sequences}, A009545, \emph{Expansion of e.g.f. $\sin(x)\exp(x)$},
+formula for the imaginary part of $(1+\mathrm i)^n$ and its recurrence.
+\url{https://oeis.org/A009545}. Accessed 4 November 2026.
+\end{thebibliography}
+\smallskip\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang. Licensed under Creative
+Commons Attribution 4.0 International (CC BY 4.0):
+\url{https://creativecommons.org/licenses/by/4.0/}.
+\end{document}

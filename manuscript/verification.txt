@@ -1,0 +1,17 @@
+SQUARE_MINUS_ONE k=1: 1 exact polynomial identities
+SQUARE_MINUS_ONE k=2: 2 exact polynomial identities
+SQUARE_MINUS_ONE k=3: 6 exact polynomial identities
+SQUARE_MINUS_ONE k=4: 24 exact polynomial identities
+SQUARE_MINUS_ONE k=5: 120 exact polynomial identities
+SQUARE_MINUS_ONE k=6: 720 exact polynomial identities
+EXTERIOR_PARITY: 873 return orders, every odd-degree coefficient zero
+MIXED_SIGNS k=1..4: 442 exact polynomial identities
+NON_STAR_TRIANGLES: 12 exact identities; full product equals -1
+MIXED_COMPACT k=1..6: 378 exact rational cases
+PERMUTATION_GRAPHS k=1..6: 873 orders, 50362 vertex signs and component factorizations
+SHORT_LOOPS k=1..3: 210 exact normalized loops, scalar-plus-bivector and quadratic identities
+CHEBYSHEV_POWERS n=0..8: 1890 exact scalar identities
+FOUR_FACTOR_BOUNDARY: scalar=-1/4, squared scalar=-1/4, T2(scalar)=-7/8, five grade-four coefficients of magnitude 1/4
+EQUAL_WEIGHT_SEQUENCE k=0..64: 65 exact signed binomial sums equal A009545(k+1)
+SCOPE: finite polynomial coefficient comparisons and exact rational geometric cases
+ALL_CHECKS_OK

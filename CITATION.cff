@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Permuted rotor loops beyond Jenzer (2026): resolving Remark 5.5 (arXiv:2610.21593v1, p. 19)"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-22"
+version: "5"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/jen2610-permuted-rotor-loops?version=5"
+license: "CC-BY-4.0"
