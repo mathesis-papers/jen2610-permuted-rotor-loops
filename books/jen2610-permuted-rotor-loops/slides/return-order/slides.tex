@@ -1,0 +1,100 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{Permuted rotor loops without the star condition}
+\author{Haobo Ma \and Wenlin Zhang}
+\institute{ChronoAI Pte Ltd, Singapore \\ National University of Singapore (Wenlin Zhang)}
+\date{Version 5 seminar materials}
+\begin{document}
+% Manuscript: title and §1
+\begin{frame}
+  \titlepage
+  \note{The talk follows the accepted version by Haobo Ma and Wenlin Zhang. The question is Jenzer's Remark 5.5, p. 19 of arXiv:2610.21593v1. Distinguish the forward chain from the closed loop.}
+\end{frame}
+% Manuscript: §§1–3
+\begin{frame}{Outline}
+  \tableofcontents
+  \note{Start with three planes. Then count selected pairs and explain why the only potentially nonzero off-diagonal group cancels. Close with the scope and a boundary example.}
+\end{frame}
+\section{The question}
+\subsection{A non-star family}
+% Manuscript: §1 and the triangle following Corollary 7
+\begin{frame}{Three planes break the star condition}
+  In $\mathrm{Cl}_{0,3}$, take $B_1=e_1e_2$, $B_2=e_1e_3$, $B_3=e_2e_3$.
+  \[
+    B_i^2=-1,\qquad B_iB_j=-B_jB_i\ (i\ne j),\qquad B_1B_2B_3=-1.
+  \]
+  \begin{itemize}
+    \item The star condition would require every nonempty subset product to have zero scalar part.
+    \item The forward chain can retain the triple term.
+    \item Does the loop formula still hold for every return order?
+  \end{itemize}
+  \note{Since $B_1B_2=B_3$, the triple product is $-1$. The scalar of the forward chain is $c_1c_2c_3-s_1s_2s_3$. Jenzer's Theorem 5.2 handles the same-order loop; the extension concerns arbitrary return order without the star hypothesis.}
+\end{frame}
+\section{The scalar formula}
+\subsection{Signs and a worked example}
+% Manuscript: Theorem 1 and Corollary 9
+\begin{frame}{Select a subset, then count pairs}
+  \begin{bookresult}{loop-formula}
+    For pairwise anticommuting square-$-1$ bivectors and any return permutation, select $i$ independently with weight $w_i=\sin^2(\theta_i/2)$.
+    The loop scalar is the average of $(-1)^{e_\tau(S)}$, where $e_\tau(S)$ counts pairs in $S$ whose relative order is unchanged.
+  \end{bookresult}
+  \note{Use a finite-dimensional real Clifford algebra with nondegenerate quadratic form of any signature. The exact weight is $\prod_{i\in S}w_i\prod_{i\notin S}(1-w_i)$. The parity of $|S|(|S|+3)/2$ equals that of $\binom{|S|}{2}$; adding the inversion count has the same parity effect as subtracting it.}
+\end{frame}
+% Manuscript: Theorem 1 and Corollary 9, worked specialization
+\begin{frame}{A return of $2,1,3$}
+  \begin{itemize}
+    \item Pairs keeping their order: $\{1,3\}$ and $\{2,3\}$.
+    \item For $w_1=w_2=w_3=1/2$, subsets without $3$ all give $+1$.
+    \item Subsets with $3$ give $+1,-1,-1,+1$: their contributions cancel.
+  \end{itemize}
+  Thus $t(\Theta_3(2,1,3))=1/2$. Reverse return instead gives $1$.
+  \note{List the four choices of $1$ and $2$ conditional on selecting $3$. The whole return is not claimed to be the identity for order $2,1,3$; only the scalar is calculated. Reverse order cancels the factors themselves.}
+\end{frame}
+\section{Why the formula survives}
+\subsection{Trace and exterior cancellation}
+% Manuscript: Lemma 2 and Theorem 1 proof
+\begin{frame}{The only off-diagonal exception}
+  Expand by outward subset $S$ and return subset $T$.
+  \begin{itemize}
+    \item $S=T$: each repeated index squares; compute the rearrangement sign.
+    \item $S\ne T$: cyclicity lets us conjugate by $B_j$ without changing the scalar.
+    \item A sign flip forces zero except when $k$ is odd and $T=I\setminus S$.
+  \end{itemize}
+  \note{The residual set is $D=S\mathbin{\triangle}T$. If its positive size is even choose $j\in D$; if odd and proper choose $j\notin D$. Conjugation fixes $B_j$ and negates all other bivectors. In the exceptional group every coefficient contains $\prod_i c_i s_i$.}
+\end{frame}
+% Manuscript: Lemma 3 and complementary-subset correction
+\begin{frame}{Swap with an even correction}
+  Switch to exterior markers: $x^2=y^2=0$, $xy=-yx$.
+  \[
+    (1+x)(1+y)=(1+2xy)(1+y)(1+x).
+  \]
+  \begin{enumerate}
+    \item Each swap contributes a commuting even factor.
+    \item Reorder the return to reverse and cancel from the middle.
+    \item The remaining product is even, so the full odd coefficient is zero.
+  \end{enumerate}
+  \note{The markers are a sign bookkeeping device, not new bivectors in the Clifford algebra. Their top coefficient sums the signs of all complementary choices; it multiplies $t(B_I)\prod_i c_i s_i$. The sum vanishes even when $t(B_I)$ does not.}
+\end{frame}
+\section{Scope and sources}
+% Manuscript: Corollaries 4–9 and coverage section
+\begin{frame}{What the scalar result does not say}
+  \begin{itemize}
+    \item The mixed-square and tracial formulas are further results, not claims about probability weights.
+    \item The graph gives the sharp range and the factorization cuts in the negative-square case.
+    \item Scalar powers for at most three factors follow from a quadratic identity; four factors can violate it.
+  \end{itemize}
+  \note{One four-factor loop has $t(R)=-1/4$ and $t(R^2)=-1/4$, not $T_2(-1/4)=-7/8$. The main frozen Lean result does not in itself certify the mixed-square, power, or graph extensions.}
+\end{frame}
+% Manuscript: introduction and bibliography
+\begin{frame}{Sources}
+  \begin{itemize}
+    \item Haobo Ma and Wenlin Zhang, v5, \href{https://doi.org/10.5281/zenodo.24404942}{DOI 10.5281/zenodo.24404942}.
+    \item N. Jenzer, arXiv:2610.21593v1, Theorems 5.2 and 5.5, Remark 5.5 (p. 19).
+    \item Shirokov on conjugation averaging; Diehl--Reizenstein and de Bruijn on related exterior cancellation.
+  \end{itemize}
+  \note{The exact-version DOI refers to the paper, not this deck. The new contribution is the arbitrary-order cancellation without star, with further consequences as explained in v5.}
+\end{frame}
+\appendix
+% Manuscript: Coverage and formal statements
+\FormalVerification
+\end{document}

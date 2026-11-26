@@ -1,0 +1,25 @@
+{
+  "voice": "af_heart",
+  "speed": 0.94,
+  "say": {},
+  "music": {"bpm": 80, "progression": "a-minor"},
+  "scenes": [
+    {"id": "triangle", "name": "THREE TURNING PLANES", "lead": 1, "tail": 0.7, "lines": [
+      ["Imagine three turns, then undo each one. Reversing the order cancels everything. What if we undo turn two, then one, then three?", "想象三个转动，然后分别反做。逆序反做会完全抵消。如果按二、一、三的次序反做呢？"],
+      ["In Jenzer's triangle, the three plane symbols multiply to minus one. So the forward chain has an extra real term: the star condition fails.", "在 Jenzer 的三角形中，三个平面记号相乘等于负一。单程积因此多出一个实数项：星条件不成立。"]
+    ]},
+    {"id": "pairs", "name": "COUNT THE UNCHANGED PAIRS", "lead": 0.6, "tail": 0.8, "lines": [
+      ["The loop formula still works. Pick a subset using biased coins. Change the sign for each chosen pair whose order stays the same.", "往返公式依然成立。用偏心硬币选一个子集；选中的一对若前后顺序不变，就翻转一次符号。"],
+      ["Here those pairs are one and three, and two and three. With fair coins, the four subsets without three are all positive.", "这里这样的对是 一与三、二与三。用公平硬币时，不含三的四个子集符号全为正。"],
+      ["The four with three cancel two against two. The average sign is one half. Reverse the return and there are no pairs to count.", "含三的四个子集两正两负，彼此抵消。平均符号为二分之一。改用逆序回程，就没有这样的编号对了。"]
+    ]},
+    {"id": "cancel", "name": "WHY THE EXTRA TERMS VANISH", "lead": 0.6, "tail": 0.8, "lines": [
+      ["Most mismatched subsets give zero by a sign flip that preserves the scalar part. The only possible exception uses every index once, in odd size.", "大多数不相同的子集配对可用变号消去，因为相应变换保持标量部分。唯一可能的例外是奇数个下标各出现一次。"],
+      ["Track just those signs with symbols whose squares are zero. Swapping two return factors adds a correction of degree two. Reversing the return then lets the originals cancel.", "用平方为零的记号追踪这些符号。每次交换两个回程因子，只附加一个二次修正。把回程排成逆序后，原因子两两抵消。"],
+      ["The corrections have only even degrees, so the odd coefficient is zero. The exceptional terms vanish together, not one by one.", "修正因子只有偶数次，因此奇次系数为零。那些例外项是一起抵消的，并不是每项都为零。"]
+    ]},
+    {"id": "close", "name": "THE LOOP IS NOT THE CHAIN", "lead": 0.6, "tail": 2, "lines": [
+      ["The forward chain can remember the triangle. The loop's scalar part still obeys the same subset rule, for every return order.", "单程积仍可记住三角形。但无论按什么顺序返回，往返积的标量部分都遵守同一条子集规则。"]
+    ]}
+  ]
+}

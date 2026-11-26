@@ -1,0 +1,58 @@
+{
+  "results": {
+    "chain-correction": {
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoopAlgebra.tracial_subset_vanishing",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "scope": "The pinned result concerns the closed loop. Its support lemma is a related ingredient; it does not state the forward-chain correction or the reversion restriction modulo four."
+    },
+    "loop-formula": {
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "same",
+      "scope": "Matches real finite-dimensional nondegenerate Clifford hypotheses, k≥1, grade-two family, square −1, pairwise anticommutation, all angles and return permutations, native reversion and scalar, inverse-permutation inversions and subset sum. Fin k is the order-preserving reindexing; eta exponents are equal."
+    },
+    "mixed-loop": {
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "special case",
+      "scope": "The pinned loop theorem assumes all squares −1 and trigonometric coefficients. This result allows independently signed squares and arbitrary real coefficients, with no normalization."
+    },
+    "odd-cancellation": {
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoopWords.signed_top_sum_zero",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "special case",
+      "scope": "The public signed_top_sum_zero covers the top coefficient when k is odd, not every odd degree. A private frozen helper balanced_odd_coefficient_zero proves all odd basis coefficients for permuted lists, and it specializes to the statement, but the book resolver cannot cite private declarations. No duplicate proof task was registered."
+    },
+    "order-graph": {
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "scope": "The pinned result provides the inversion subset sum, not its graph representation, sharp range, zero or factorization/non-factorization conclusions."
+    },
+    "polar-zero": {
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "scope": "The pinned loop result does not state the normalized mixed-sign identity-order polar form or the angle and sign-pattern zero criteria."
+    },
+    "three-factor-powers": {
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "scope": "The pinned loop result concerns only the scalar part of one negative-square loop; it gives neither the simple grade-two remainder nor the scalar recurrence for powers."
+    },
+    "trace-support": {
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoopAlgebra.tracial_subset_vanishing",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "special case",
+      "scope": "The pinned tracial_subset_vanishing handles all subsets and the full odd exception, but assumes every square is −1. The manuscript also allows each square to be +1 or −1."
+    },
+    "tracial-loop": {
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "scope": "The main theorem works in a native Clifford algebra with negative squares; the general tracial helper proves only negative-square support, not the loop identity."
+    }
+  }
+}

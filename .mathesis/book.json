@@ -1,0 +1,106 @@
+{
+  "book": "jen2610-permuted-rotor-loops",
+  "pending_claims": [],
+  "results": {
+    "chain-correction": {
+      "claim": "collected:jen2610-permuted-rotor-loops:5:s7",
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoopAlgebra.tracial_subset_vanishing",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "formalization_request": {
+        "label": "Mixed-square forward-chain correction and star criterion",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/549"
+      },
+      "gids": []
+    },
+    "loop-formula": {
+      "claim": "collected:jen2610-permuted-rotor-loops:5:s1",
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "same",
+      "gids": [
+        "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result"
+      ]
+    },
+    "mixed-loop": {
+      "claim": "collected:jen2610-permuted-rotor-loops:5:s4",
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "special case",
+      "formalization_request": {
+        "label": "Mixed-square scalar formula for every return permutation",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/546"
+      },
+      "gids": []
+    },
+    "odd-cancellation": {
+      "claim": "collected:jen2610-permuted-rotor-loops:5:s3",
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoopWords.signed_top_sum_zero",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "special case",
+      "gids": []
+    },
+    "order-graph": {
+      "claim": "collected:jen2610-permuted-rotor-loops:5:s9",
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "formalization_request": {
+        "label": "Return-order graph: sharp range, zeros and factorization",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/551"
+      },
+      "gids": []
+    },
+    "polar-zero": {
+      "claim": "collected:jen2610-permuted-rotor-loops:5:s6",
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "formalization_request": {
+        "label": "Identity-return mixed-square polar identity and exact zero criterion",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/548"
+      },
+      "gids": []
+    },
+    "three-factor-powers": {
+      "claim": "collected:jen2610-permuted-rotor-loops:5:s8",
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "formalization_request": {
+        "label": "Up-to-three mixed-square bivector loop powers",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/550"
+      },
+      "gids": []
+    },
+    "trace-support": {
+      "claim": "collected:jen2610-permuted-rotor-loops:5:s2",
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoopAlgebra.tracial_subset_vanishing",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "special case",
+      "formalization_request": {
+        "label": "Trace support for mixed-square anticommuting bivectors",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/545"
+      },
+      "gids": []
+    },
+    "tracial-loop": {
+      "claim": "collected:jen2610-permuted-rotor-loops:5:s5",
+      "compared_public_gid": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "formalization_request": {
+        "label": "Mixed-square loop identity in normalized tracial algebras",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/547"
+      },
+      "gids": []
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "en": "Permuted rotor loops beyond Jenzer (2026): resolving Remark 5.5 (arXiv:2610.21593v1, p. 19)",
+    "zh": "Permuted rotor loops beyond Jenzer (2026): resolving Remark 5.5 (arXiv:2610.21593v1, p. 19)"
+  },
+  "version": 5,
+  "work": "jen2610-permuted-rotor-loops"
+}

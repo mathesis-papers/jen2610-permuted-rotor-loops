@@ -11,11 +11,11 @@
     "manuscript/SHA256SUMS",
     "manuscript/metadata.json",
     "manuscript/note.tex",
+    "manuscript/original-source.archive",
     "manuscript/verification.txt",
     "manuscript/verify.py",
     "paper.json",
-    "paper.pdf",
-    "source.archive"
+    "paper.pdf"
   ],
   "generator_version": "0.1.0",
   "sha256": {
@@ -24,17 +24,17 @@
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
     "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
     "README.md": "984bde7e529a5bb1e48cac0ac02ff3d466395eb79a7233b5dc724a1b92bd6c7f",
-    "formalization/nodes.json": "13f20fe83795eba955c4ef87ec2722dbcdb4350e84617842936e77535a82baa8",
+    "formalization/nodes.json": "6603b4da3cbc16102d6b8ad7b91b8eec7affc1445227b782d5af5cdf1db27e21",
     "manuscript/LICENSE": "f2da4bed8522145cb959f3b0bba9406e16002778d0a7aa2bb7c7a56ac1cf1627",
     "manuscript/README.md": "207a9e0d9bd927de703f4f3aa743fcba8e995c0c101c602994a424161124d7d8",
     "manuscript/SHA256SUMS": "2def4b1849c1a3d15f19c582f738666c25f88e6200ff904626756114d777c2d5",
     "manuscript/metadata.json": "c52c08632a0684ba460cd9a418f1de7d73fb017b987bb9e028d98aa5e630edd0",
     "manuscript/note.tex": "9698bf554baa80566aea5717eb2215823b239754a85cf8445a35a51d797ed8ef",
+    "manuscript/original-source.archive": "15776f3aa3e48392b337412d3bda4d39cf1a959887c18cdb0c3d6d69305c45d2",
     "manuscript/verification.txt": "c3e7855e4c2279cf3aa63d130a6789710cac6fb56f53cdbf46ef566d657c4830",
     "manuscript/verify.py": "7382d34c8050a0d6c6b4a85f245a4ec512721d31e08b98a937c0632445449758",
-    "paper.json": "0559aff1b136432627ab2d68bc5479e7d619d882cdddc04a224f194490275e54",
-    "paper.pdf": "9c2fd275976304aa2c7693fa215fc3df33ec9e34983d9e5e25b45e410361e690",
-    "source.archive": "15776f3aa3e48392b337412d3bda4d39cf1a959887c18cdb0c3d6d69305c45d2"
+    "paper.json": "c30e22db2a88e186744ff1457294e383ec797d84f6adb42616aaf39206081e20",
+    "paper.pdf": "9c2fd275976304aa2c7693fa215fc3df33ec9e34983d9e5e25b45e410361e690"
   },
-  "snapshot_identity": "70c8e647f5ea2b06c466523cf729ea2ef3a1e1303c50a308a091c07f11d5bba8"
+  "snapshot_identity": "da6bac63dd88df6cc6a6f4b62a8161db24e96b9752bc2ee07df2da86851805de"
 }

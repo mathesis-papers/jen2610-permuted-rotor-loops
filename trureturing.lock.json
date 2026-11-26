@@ -1,0 +1,17 @@
+{
+  "schema": "trureturing-books.lock.v1",
+  "repo": "the-omega-institute/trureturing",
+  "branch": "dev",
+  "commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+  "pinned_at": "2026-11-08T12:32:04Z",
+  "declarations": {
+    "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result": {
+      "module": "D5/S3/QuadraticForms/JenzerPermutedRotorLoop",
+      "name": "D5.S3.QuadraticForms.JenzerPermutedRotorLoop.result",
+      "kind": "theorem",
+      "statement_id": "sha256:dae32abe90715615abee10d9564ee1d00b7197b3f51e3ea05a57829d4300f31e",
+      "line": 111,
+      "signature": "theorem result : claim"
+    }
+  }
+}

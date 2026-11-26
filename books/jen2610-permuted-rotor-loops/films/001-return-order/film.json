@@ -1,0 +1,29 @@
+{
+  "duration": "1:28",
+  "id": "001-return-order",
+  "lean": [
+    "D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result"
+  ],
+  "narration": {
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "language": "en",
+    "voice": "af_heart"
+  },
+  "outputs": {
+    "cover": "jen2610-permuted-rotor-loops_001_cover.jpg",
+    "narrated_720p": "jen2610-permuted-rotor-loops_001_720p_narrated.mp4"
+  },
+  "publication_basis": "pinned",
+  "released": "2026-11-23",
+  "resolution": "1280x720@30",
+  "style": "trureturing cyberpunk · deterministic canvas",
+  "subject": "https://doi.org/10.5281/zenodo.24404942",
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "summary": "Three planes break the star condition. Count the pairs that keep their order, then see why the exceptional odd terms cancel together.",
+  "summary_zh": "三张转动平面打破星条件。数出回程次序不变的编号对，再看看例外的奇次项为何一起抵消。",
+  "title": "Changing the return order",
+  "title_zh": "换个顺序返回"
+}

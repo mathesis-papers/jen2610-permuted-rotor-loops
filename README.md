@@ -32,3 +32,44 @@ Haobo Ma, Wenlin Zhang (2026). Permuted rotor loops beyond Jenzer (2026): resolv
 ## Contributions
 
 Original authors are listed above. Formalization contributors and attribution are retained in `formalization/nodes.json`; repository pull requests do not confer verification or credit. Submit formalization attempts through the Mathesis attempt path described in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+<!-- Mathesis generated repository guide; refresh with paper.py front. -->
+
+## Reading and materials
+
+[Paper site](https://papers.trureturing.org/jen2610-permuted-rotor-loops/) · [Frozen PDF](paper.pdf) · [Citation](CITATION.cff)
+
+[中文阅读](https://papers.trureturing.org/jen2610-permuted-rotor-loops/jen2610-permuted-rotor-loops/zh/) · [Read in English](https://papers.trureturing.org/jen2610-permuted-rotor-loops/jen2610-permuted-rotor-loops/en/)
+
+[Slides](https://papers.trureturing.org/jen2610-permuted-rotor-loops/jen2610-permuted-rotor-loops/slides/) ([sources](books/jen2610-permuted-rotor-loops/slides/)) · [Videos](https://papers.trureturing.org/jen2610-permuted-rotor-loops/jen2610-permuted-rotor-loops/films/) ([sources](books/jen2610-permuted-rotor-loops/films/))
+
+These are publication routes; available built materials are inventoried in [mathesis-materials.json](https://papers.trureturing.org/jen2610-permuted-rotor-loops/mathesis-materials.json).
+
+## Book and formalization
+
+Catalog formalization status above is separate from the statement comparisons below. A nearby declaration does not verify the complete written result.
+
+| Book result | Comparison with formal base | Compared declaration |
+|---|---|---|
+| `chain-correction` | variant | `D5/S3/QuadraticForms/JenzerPermutedRotorLoopAlgebra.tracial_subset_vanishing` |
+| `loop-formula` | same | `D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result` |
+| `mixed-loop` | special case | `D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result` |
+| `odd-cancellation` | special case | `D5/S3/QuadraticForms/JenzerPermutedRotorLoopWords.signed_top_sum_zero` |
+| `order-graph` | variant | `D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result` |
+| `polar-zero` | variant | `D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result` |
+| `three-factor-powers` | variant | `D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result` |
+| `trace-support` | special case | `D5/S3/QuadraticForms/JenzerPermutedRotorLoopAlgebra.tracial_subset_vanishing` |
+| `tracial-loop` | variant | `D5/S3/QuadraticForms/JenzerPermutedRotorLoop.result` |
+
+Book stage: **complete**; 0 pending claims. [Statement comparisons](.mathesis/review.json).
+
+## Repository map
+
+| Zone | Location |
+|---|---|
+| Paper record | `paper.json`, `CITATION.cff`, `paper.pdf`, `manuscript/`, `formalization/nodes.json`, `LICENSES/`, `.mathesis/` |
+| Content | `books/jen2610-permuted-rotor-loops/`: Chinese/English text, figures, visualizations, videos, slides, assets |
+| Machinery | Upstream and layer managed paths; update with `tbook template update` |
+| Repository front | This README, changelog, contribution guide, licence, project/site/pin configuration, `template.d/` |
+
+See [the enforced layout](docs/layer-mathesis/LAYOUT.md). Preparation run records and built outputs stay outside the committed tree.
